@@ -5,6 +5,7 @@ localStorage.clear();
 const encabezado = document.querySelector('#encabezado')
 const enlaces = document.querySelectorAll('.enlace')
 const boton = document.querySelector('#vaciar-carrito')
+const busqueda = document.querySelector('#buscador')
 
 // Click
 // boton.addEventListener('click', obtenerEvento)
@@ -19,11 +20,25 @@ const boton = document.querySelector('#vaciar-carrito')
 // // Mouse out
 // boton.addEventListener('mouseout', obtenerEvento)
 // // Mouse down
-boton.addEventListener('mousedown', obtenerEvento)
+// boton.addEventListener('mousedown', obtenerEvento)
 // // Mouse up
-boton.addEventListener('mouseup', obtenerEvento)
+// boton.addEventListener('mouseup', obtenerEvento)
+
+// Inputs
+// busqueda.addEventListener('keydown', obtenerEvento)
+// busqueda.addEventListener('keyup', obtenerEvento)
+// busqueda.addEventListener('keypress', obtenerEvento)
+// busqueda.addEventListener('focus', obtenerEvento)
+// busqueda.addEventListener('blur', obtenerEvento)
+// busqueda.addEventListener('cut', obtenerEvento)
+// busqueda.addEventListener('copy', obtenerEvento)
+// busqueda.addEventListener('paste', obtenerEvento)
+// busqueda.addEventListener('input', obtenerEvento)
+busqueda.addEventListener('change', obtenerEvento) // Mejor para selects
+
 
 function obtenerEvento(e) {
   e.preventDefault()
-  console.log(`Evento: ${e.type}`);
+  console.log(busqueda.value)
+  console.log(`Evento: ${e.type}`)
 }
