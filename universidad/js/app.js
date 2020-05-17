@@ -2,10 +2,11 @@
 localStorage.clear();
 
 // Event Bubbling
-// Sucede cuando elementos, dentro de otro elemento tienen funciones, al dar click a un elemento
-// dentro de otro se ejecutan ambas funcionas, ejemplo, un botón dentro de un card, al dar click
-// en el botón solo el botón debería ejecutar su función, pero además del botón la ejecutan sus
-// parents, que también tenían funciones a ejecutar en caso de click.
+// Sucede cuando tenemos por ejemplo un elemento card que tiene un evento a ejecutar al dar click,
+// y dentro existe otro elemento de la card, como un botón o una imagen, que tiene sus propios
+// eventos a ejecutar. Al dar click en el botón, se ejecuta su evento como el evento del padre
+// pero en realidad solo queremos que se ejecute el del botón. Esto se puede solucionar con 
+// Stop propagation o event delegation
 
 const card = document.querySelector('.card')
 const infoCard = document.querySelector('.info-card')
