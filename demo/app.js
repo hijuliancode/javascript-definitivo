@@ -1,9 +1,22 @@
-// Variables
+// Async Await
 
-// Event Listeners
-document.addEventListener('DOMContentLoaded', init)
-
-// Functions
-function init() {
-  console.log('demo app')
+async function obtenerClientes() {
+  // crear un promise
+  const clientes = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Clientes descargados...')
+    }, 2000);
+  })
+  // error o no ...
+  const error = true
+  if (!error) {
+    const respuesta = await clientes
+    return respuesta
+  } else {
+    await Promise.reject('Hubo un error...')
+  }
 }
+
+obtenerClientes()
+  .then(res => console.log(res))
+  .catch(error => console.error(error))
