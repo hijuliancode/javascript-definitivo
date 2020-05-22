@@ -1,9 +1,16 @@
-// Variables
+// Promises
+const aplicarDescuento = new Promise((resolve, reject) => {
+  const descuento = true
+  if (descuento) {
+    resolve('Descuento Aplicado')
+  } else {
+    reject('No se puede aplicar el descuento')
+  }
+})
 
-// Event Listeners
-document.addEventListener('DOMContentLoaded', init)
-
-// Functions
-function init() {
-  console.log('demo app')
-}
+aplicarDescuento
+  .then(respuesta => {
+    console.log(respuesta)
+  }).catch(error => {
+    console.log(error)
+  })
