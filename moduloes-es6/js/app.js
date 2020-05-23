@@ -1,6 +1,9 @@
 // import * as cliente from "./cliente.js"; // En caso de muchas importancioens
 // console.log(cliente.nombreCliente)
 
-import { nombreCliente, ahorro } from "./cliente.js";
+import { nombreCliente, ahorro, mostrarInformacion, mostrarNombre } from "./cliente.js";
 
-console.log(nombreCliente)
+console.log(mostrarInformacion(nombreCliente, ahorro))
+
+const mostrarNombreCliente = mostrarNombre(nombreCliente);
+console.log(mostrarNombreCliente)
