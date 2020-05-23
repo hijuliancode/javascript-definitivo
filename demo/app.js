@@ -14,9 +14,11 @@ const cliente = {
   }
 }
 
-let { nombre, datos, datos: { cuenta, ubicacion } } = cliente;
+let { nombre, datos, datos: { cuenta, ubicacion }, telefono = 'No hay télefono' } = cliente;
 
 console.log(nombre)
+console.log(telefono)
 console.log(datos)
 console.log(cuenta)
+console.log(cuenta.saldo)
 console.log(ubicacion)
