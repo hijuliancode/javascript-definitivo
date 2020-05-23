@@ -14,4 +14,7 @@ export class Cliente {
     this.nombre = nombre,
     this.ahorro = ahorro
   }
+  mostrarInformacion() {
+    return `Nombre: ${this.nombre} - Ahorro: ${this.ahorro}`
+  }
 }
